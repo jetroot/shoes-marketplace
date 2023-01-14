@@ -1,0 +1,13 @@
+version: '3.9'
+
+services:
+  shoes_db:
+    container_name: shoes_postgres_db
+    image: postgres:alpine3.17
+    environment:
+      - POSTGRES_USER=test
+      - POSTGRES_PASSWORD=test
+      - POSTGRES_DB=shoes
+    ports:
+      - 5432:5432
+    
