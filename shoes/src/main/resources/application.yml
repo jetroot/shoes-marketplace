@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost/shoes
+    username: test
+    password: test
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    defer-datasource-initialization: true
+
+  sql:
+    init:
+      mode: always
+
+  # For graphql
+  graphql:
+    graphiql:
+      enabled: true
+    schema:
+      file-extensions: .graphql
+
