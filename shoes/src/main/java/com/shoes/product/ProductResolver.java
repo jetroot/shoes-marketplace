@@ -1,8 +1,10 @@
 package com.shoes.product;
 
+import com.sun.net.httpserver.Headers;
 import org.springframework.graphql.data.method.annotation.Argument;
 import org.springframework.graphql.data.method.annotation.MutationMapping;
 import org.springframework.graphql.data.method.annotation.QueryMapping;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -23,6 +25,11 @@ public class ProductResolver {
                 productService.getAllProducts(),
                 HttpStatus.OK
         );
+
+//        return ResponseEntity.ok()
+//                .header("ACCESS_CONTROL_ALLOW_ORIGIN", "http://127.0.0.1:3000")
+//                .body(productService.getAllProducts());
+//        return ResponseEntity.ok(productService.getAllProducts()).header("ACCESS_CONTROL_ALLOW_ORIGIN");
     }
 
     @MutationMapping(name = "createProduct")
