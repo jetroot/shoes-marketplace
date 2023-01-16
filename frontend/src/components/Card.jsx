@@ -21,7 +21,9 @@ const Card = () => {
             <div className="max-w-7xl w-full mt-5">
                 <TitleWithButton
                     title={"Recommended"}
-                    btnLabel={"More"}
+                    btnLabel={"Create"}
+                    isLink={true}
+                    to={'/create'}
                     styles={" bg-white my-4 p-4 w-full"}
                 />
                 {loading && <Loader />}

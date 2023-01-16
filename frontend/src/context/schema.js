@@ -29,3 +29,11 @@ export const GET_PRODUCT_BY_ID = gql`
         }
     }
 `;
+
+export const CREATE_PRODUCT = gql`
+    mutation product($product:ProductInput) {
+        createProduct(product: $product) {
+            status
+        }
+    }
+`;
